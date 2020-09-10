@@ -32,7 +32,7 @@ this.onSubmit = this.onSubmit.bind(this)
     }
     
     getContactsPost() {
-        axios.get('http://localhost:5000/contacts')
+        axios.get(BACKEND_URL + 'users/')
        .then((res) => {
          const data = res.data;
           console.log(res.data)
@@ -90,7 +90,7 @@ onSubmit(e){
   }
   console.log(contact);
 //122 video
-  axios.post('http://localhost:5000/contacts/add', contact)
+  axios.post(BACKEND_URL + 'users/', contact)
   .then(res => console.log(res.data))
 
   // window.location = '/';
